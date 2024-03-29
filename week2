@@ -1,0 +1,219 @@
+user@anwesh:~$ grep
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+user@anwesh:~$ grep file
+user@anwesh:~$ cat file
+cat: file: No such file or directory
+user@anwesh:~$ cat >file
+wellcome to ubuntu
+linux and unix are commands
+rgukt is one of the greatest university
+this is unix
+user@anwesh:~$ cat file
+wellcome to ubuntu
+linux and unix are commands
+rgukt is one of the greatest university
+this is unix
+user@anwesh:~$ grep file
+user@anwesh:~$ cat file
+wellcome to ubuntu
+linux and unix are commands
+rgukt is one of the greatest university
+this is unix
+user@anwesh:~$ grep "linux"file
+user@anwesh:~$ grep "linux" file
+linux and unix are commands
+user@anwesh:~$ grep "rgukt" file
+rgukt is one of the greatest university
+user@anwesh:~$ grep -n "rgukt" file
+3:rgukt is one of the greatest university
+user@anwesh:~$ grep -h "rgukt" file
+rgukt is one of the greatest university
+user@anwesh:~$ grep -c "rgukt" file
+1
+user@anwesh:~$ grep -c "unix" file
+2
+user@anwesh:~$ grep -l "unix" file
+file
+user@anwesh:~$ grep -v "unix" file
+wellcome to ubuntu
+rgukt is one of the greatest university
+user@anwesh:~$ grep -e "unix" file
+linux and unix are commands
+this is unix
+user@anwesh:~$ grep -o "unix" file
+unix
+unix
+user@anwesh:~$ cat > geekfile.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+user@anwesh:~$ cat geekfile.txt
+powerful.unix is great os. unix is opensource. unix is free os.s a
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+user@anwesh:~$ sed 's/unix/UNIX/' geekfile.txt
+powerful.unix is great os. unix is opensource. unix is free os.s a
+learn operating system.
+UNIX linux which one you choose.
+UNIX is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+user@anwesh:~$ sed 's/UNIX/unix/1' geekfile.txt
+powerful.unix is great os. unix is opensource. unix is free os.s a
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+user@anwesh:~$ sed '3d' geekfile.txt
+powerful.unix is great os. unix is opensource. unix is free os.s a
+learn operating system.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+user@anwesh:~$ cat >names.txt
+gopikrishna
+anwesh
+rajesh 
+afroz
+balaji
+rahul
+user@anwesh:~$ sort names.txt
+afroz
+anwesh
+balaji
+gopikrishna
+rahul
+rajesh
+user@anwesh:~$ cat > student.txt
+B200462 Anwesh cse 99
+B200469 Gopikrishna 89
+B200101 Rajesh 70
+B201284 Balaji 40
+B00918 Afroz 79
+user@anwesh:~$ cat > student.txt
+B200462 Anwesh cse 99
+B200467 Gopikrishna 89
+B200101 Rajesh 70
+B201284 Balaji 40
+B00918 Afroz 79
+user@anwesh:~$ cat  student.txt
+B200462 Anwesh cse 99
+B200467 Gopikrishna 89
+B200101 Rajesh 70
+B201284 Balaji 40
+B00918 Afroz 79
+user@anwesh:~$ sort student.txt
+B00918 Afroz 79
+B200101 Rajesh 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna 89
+B201284 Balaji 40
+user@anwesh:~$ cat > student.txt
+B200462 Anwesh cse 99
+B200467 Gopikrishna 89
+B200101 Rajesh 70
+B201284 Balaji 40
+B20918 Afroz 79
+user@anwesh:~$ sort student.txt
+B200101 Rajesh 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna 89
+B201284 Balaji 40
+B20918 Afroz 79
+user@anwesh:~$ awk '{print $1,$3}' student.txt
+B200462 cse
+B200467 89
+B200101 70
+B201284 40
+B20918 79
+user@anwesh:~$ cat > student.txt
+B200101 Rajesh 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna 89
+B201284 Balaji 40
+B200918 Afroz 79
+user@anwesh:~$ awk '{print $1,$3}' student.txt
+B200101 70
+B200462 cse
+B200467 89
+B201284 40
+B200918 79
+user@anwesh:~$ sort student.txt
+B200101 Rajesh 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna 89
+B200918 Afroz 79
+B201284 Balaji 40
+user@anwesh:~$ awk '{print $2,$3}' student.txt
+Rajesh 70
+Anwesh cse
+Gopikrishna 89
+Balaji 40
+Afroz 79
+user@anwesh:~$ cat > student.txt
+B200101 Rajesh cse 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna cse 89
+B201284 Balaji cse 40
+B200918 Afroz civil 79
+user@anwesh:~$ sort student.txt
+B200101 Rajesh cse 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna cse 89
+B200918 Afroz civil 79
+B201284 Balaji cse 40
+user@anwesh:~$ awk '{print $2,$3}' student.txt
+Rajesh cse
+Anwesh cse
+Gopikrishna cse
+Balaji cse
+Afroz civil
+user@anwesh:~$ awk '{print $2,$4}' student.txt
+Rajesh 70
+Anwesh 99
+Gopikrishna 89
+Balaji 40
+Afroz 79
+user@anwesh:~$ awk '{print $1,$3}' student.txt
+B200101 cse
+B200462 cse
+B200467 cse
+B201284 cse
+B200918 civil
+user@anwesh:~$ awk student.txt
+awk: 1: unexpected character '.'
+user@anwesh:~$ student.txt
+student.txt: command not found
+user@anwesh:~$ cat student.txt
+B200101 Rajesh cse 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna cse 89
+B201284 Balaji cse 40
+B200918 Afroz civil 79
+user@anwesh:~$ awk '/civil/{print}' student.txt
+B200918 Afroz civil 79
+user@anwesh:~$ awk '/cse/{print}' student.txt
+B200101 Rajesh cse 70
+B200462 Anwesh cse 99
+B200467 Gopikrishna cse 89
+B201284 Balaji cse 40
+user@anwesh:~$ awk '/b200462/{print}' student.txt
+user@anwesh:~$ awk '/B200462/{print}' student.txt
+B200462 Anwesh cse 99
+user@anwesh:~$ ftp.dlptest.com
+ftp.dlptest.com: command not found
+user@anwesh:~$ ftp://ftp.dlptest.com/
+bash: ftp://ftp.dlptest.com/: No such file or directory
+user@anwesh:~$ dlpuser
+
+Command 'dlpuser' not found, did you mean:
+
+  command 'dpuser' from deb dpuser (4.0+dfsg-2build1)
+
+Try: sudo apt install <deb name>
+
+user@anwesh:~$ 
+
