@@ -1,0 +1,292 @@
+user@anwesh:~$ whoami
+user
+user@anwesh:~$ id
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare)
+user@anwesh:~$ groups
+user adm cdrom sudo dip plugdev lpadmin lxd sambashare
+user@anwesh:~$ who
+user     :0           2024-03-29 10:51 (:0)
+
+wtmp begins Wed Mar 16 13:02:23 2022
+user@anwesh:~$ cd Deskyop
+bash: cd: Deskyop: No such file or directory
+user@anwesh:~$ cd Desktop
+user@anwesh:~/Desktop$ cd..
+cd..: command not found
+user@anwesh:~/Desktop$ cd ..
+user@anwesh:~$ pwd
+/home/user
+user@anwesh:~$ mkdir
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+user@anwesh:~$ rmkdir
+
+Command 'rmkdir' not found, did you mean:
+
+  command 'mmkdir' from deb mblaze (0.6-1)
+  command 'mkdir' from deb coreutils (8.30-3ubuntu2)
+  command 'rmdir' from deb coreutils (8.30-3ubuntu2)
+  command 'hmkdir' from deb hfsutils (3.2.6-14)
+
+Try: sudo apt install <deb name>
+
+user@anwesh:~$ ps
+    PID TTY          TIME CMD
+   5075 pts/0    00:00:00 bash
+   5125 pts/0    00:00:00 ps
+0      0 I   0.0   0.0   0:00.00 kworker/3:0H-events_highpri                                                                                            
+user@anwesh:~$ history
+  
+ 1089  java A
+ 1090  sudo apt install default-jdk
+ 1091  javac A.java
+ 1092  cd java
+ 1093  chmd +rx week1
+ 1094  chmod +rx week1
+ 1095  cd..
+ 1096  sudo chown guest:guest java
+ 1097  sudo usermod -aG groupname guest
+ 1098  sudo groupadd grp
+ 1099  sudo usermod -aG grp afroz-mohammad
+ 1100  sudo usermod -aG grp user@anwesh
+ 1101  sudo usermod -aG grp @afrozmohammad
+ 1102  sudo usermod -aG grp @afroz mohammad
+ 1103  sudo usermod -aG grp @guest
+ 1104  sudo usermod -aG grp guest@afroz mohammad
+ 1105  sudo chmod +rx java
+ 1106  sudo chmod -rx java
+ 1107  javac binary.java
+ 1108  java binary
+ 1109  javac command.java
+ 1110  java command anwesh
+ 1111  javac command.java
+ 1112  java command anwesh
+ 1113  javac command.java
+ 1114  java command anwesh
+ 1115  java command anwesh afroz
+ 1116  java command anwesh
+ 1117  javac command.java
+ 1118  java command anwesh
+ 1119  java command anwesh afroz
+ 1120  javac command.java
+ 1121  java command anwesh afroz
+ 1122  javac command.java
+ 1123  java command anwesh afroz
+ 1124  javac command.java
+ 1125  java command anwesh afroz
+ 1126  history
+ 1127  gnome-system-log
+ 1128  javac p2.java
+ 1129  java p2
+ 1130  javac p2.java
+ 1131  javac fee.java
+ 1132  java fee
+ 1133  javac fee.java
+ 1134  java fee
+ 1135  javac p1 java
+ 1136  javac p1.java
+ 1137  java p1
+ 1138  javac prime.java
+ 1139  prime java
+ 1140  java prime
+ 1141  javac arraycommand.java
+ 1142  java arraycommand
+ 1143  javac super_ex.java
+ 1144  java super_ex
+ 1145  javac overRideOverLoad.java
+ 1146  java overRideOverLoad
+ 1147  gcc close_pair.c
+ 1148  ./a.out
+ 1149  gcc close_pair.c
+ 1150  ./a.out
+ 1151  gcc close_pair.c
+ 1152  gcc close_pair.c -ln
+ 1153  gcc close_pair.c -lm
+ 1154  ./a.out
+ 1155  gcc close_pair.c -lm
+ 1156  ./a.out
+ 1157  gcc close_pair.c -lm
+ 1158  ./a.out
+ 1159  gcc close.c
+ 1160  ./a.out
+ 1161  gcc close.c
+ 1162  ./a.out
+ 1163  gcc close.c
+ 1164  ./a.out
+ 1165  history
+ 1166  hi
+ 1167  ps
+ 1168  ps -ef
+ 1169  cal
+ 1170  cat >file1.txt
+ 1171  ls
+ 1172  file1.txt
+ 1173  cat file1.txt
+ 1174  cat >file1.txt
+ 1175  grep "welcome" file1.txt
+ 1176  grep "hi" file1.txt
+ 1177  grep "s" file1.txt
+ 1178  grep -n "s" file1.txt
+ 1179  grep -h "s" file1.txt
+ 1180  grep -n "s" file1.txt
+ 1181  cat >file1.txt
+ 1182  cat file1.txt
+ 1183  cat >month.txt
+ 1184  sort month.txt
+ 1185  sort -M month.txt
+ 1186  cat >number.txt
+ 1187  sort number.txt
+ 1188  sort -n number.txt
+ 1189  sort -u number.txt
+ 1190  cat number.txt
+ 1191  sort -u number.txt
+ 1192  cat >sedfile.txt
+ 1193  sed 's/offline/' sedfile.txt
+ 1194  sed 's/offline/OFFLINE' sedfile.txt
+ 1195  sed 's/offline./OFFLINE.' sedfile.txt
+ 1196  sed '/offline/d' sedfile.txt
+ 1197  sed '/offline./OFFLINE.' sedfile.txt
+ 1198  sed '/one/d' file1.txt
+ 1199  sed 's/unix/UNIX' file1.txt
+ 1200  sed 's/unix/UNIX/' file1.txt
+ 1201  sed '/offline./OFFLINE./' sedfile.txt
+ 1202  sed '/offline/OFFLINE/' sedfile.txt
+ 1203  sed 's/offline./OFFLINE./' sedfile.txt
+ 1204  cat >awkfile.txt
+ 1205  awk '{print $1,$3}' awkfile.txt
+ 1206  awk '{print $1}' awkfile.txt
+ 1207  shutdown
+ 1208  poweroff
+ 1209  cal
+ 1210  man sort
+ 1211  man ls
+ 1212  man poweroff
+ 1213  man sudo
+ 1214  man mkdir
+ 1215  poweroff
+ 1216  whoami
+ 1217  id
+ 1218  groups
+ 1219  who
+ 1220  last
+ 1221  cd Deskyop
+ 1222  cd Desktop
+ 1223  cd..
+ 1224  cd ..
+ 1225  pwd
+ 1226  mkdir
+ 1227  rmkdir
+ 1228  ps
+ 1229  ps -ef
+ 1230  top
+ 1231  history
+user@anwesh:~$ touch f1
+user@anwesh:~$ cat f1
+user@anwesh:~$ cat >f1
+Hello... Im Anwesh
+welcome to IT Lab
+user@anwesh:~$ copy f1 f2
+
+Command 'copy' not found, did you mean:
+
+  command 'cozy' from snap cozy (1.3.0)
+  command 'copay' from snap copay (12.5.6)
+  command 'opy' from snap opy (latest)
+  command 'rcopy' from deb rdmacm-utils (28.0-1ubuntu1)
+  command 'copyq' from deb copyq (3.10.0-1)
+  command 'mcopy' from deb mtools (4.0.24-1)
+  command 'bcopy' from deb bacula-sd (9.4.2-2ubuntu5)
+  command 'ropy' from deb libdisorder-tools (0.0.2+git20130809.8062ee1-1)
+  command 'fcopy' from deb fai-client (5.3.6ubuntu1)
+  command 'hcopy' from deb hfsutils (3.2.6-14)
+
+See 'snap info <snapname>' for additional versions.
+
+user@anwesh:~$ cp f1 f2
+user@anwesh:~$ delete f2
+delete: command not found
+user@anwesh:~$ rm f2
+user@anwesh:~$ mkdir dir1
+user@anwesh:~$ cd dir1
+user@anwesh:~/dir1$ pwd
+/home/user/dir1
+user@anwesh:~/dir1$ ls
+user@anwesh:~/dir1$ touch f1
+user@anwesh:~/dir1$ ls
+f1
+user@anwesh:~/dir1$ cp f1 f2
+user@anwesh:~/dir1$ ls
+f1  f2
+user@anwesh:~/dir1$ which f1
+user@anwesh:~/dir1$ which [-a] f1
+user@anwesh:~/dir1$ which cat
+/usr/bin/cat
+user@anwesh:~/dir1$ change user to anwesh
+
+Command 'change' not found, did you mean:
+
+  command 'charge' from deb emboss (6.6.0+dfsg-7ubuntu2)
+  command 'chage' from deb passwd (1:4.8.1-1ubuntu5.20.04.4)
+
+Try: sudo apt install <deb name>
+
+user@anwesh:~/dir1$ Change user to anwesh
+Change: command not found
+user@anwesh:~/dir1$ sudo ls
+[sudo] password for user: 
+f1  f2
+user@anwesh:~/dir1$ find f1
+f1
+user@anwesh:~/dir1$ cal 
+     March 2024       
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+31                    
+user@anwesh:~/dir1$ cal 4 2003
+     April 2003       
+Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28 29 30           
+                      
+user@anwesh:~/dir1$ date
+Friday 29 March 2024 11:38:19 AM IST
+user@anwesh:~/dir1$ who
+user     :0           2024-03-29 10:51 (:0)
+user@anwesh:~/dir1$ whoami
+user
+user@anwesh:~/dir1$ cat >it_lab.txt
+Welcome to It lab
+this is week1 lab pratice session
+i have created a file named "it_lab.txt"
+user@anwesh:~/dir1$ ls
+f1  f2  it_lab.txt
+user@anwesh:~/dir1$ cat it_lab.txt
+Welcome to It lab
+this is week1 lab pratice session
+i have created a file named "it_lab.txt"
+user@anwesh:~/dir1$ rm f2
+user@anwesh:~/dir1$ ls
+f1  it_lab.txt
+user@anwesh:~/dir1$ rm f1
+user@anwesh:~/dir1$ ls
+it_lab.txt
+user@anwesh:~/dir1$ cat rgukt
+cat: rgukt: No such file or directory
+user@anwesh:~/dir1$ touch rgukt.txt
+user@anwesh:~/dir1$ cat rgukt
+cat: rgukt: No such file or directory
+user@anwesh:~/dir1$ cat rgukt.txt
+user@anwesh:~/dir1$ cat >rgukt.txt
+hello
+user@anwesh:~/dir1$ cat rgukt.txt
+hello
+user@anwesh:~/dir1$ 
+
+
